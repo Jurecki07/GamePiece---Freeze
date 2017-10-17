@@ -4,34 +4,32 @@ public class Main {
 
     public static void main(String[] args) {
 
-        GamePiece knight = new GamePiece();
+        GamePiece gamePiece = new GamePiece();
 
-        knight.setColor("white");
-        knight.setName("Sir Robin");
+       // gamePiece.setColor("white");
+        //knight.setName("Sir Robin");
 
-
-
-        if (!knight.isFrozen()) {
-            knight.freeze();
+        if (!gamePiece.isFrozen()) {
+            gamePiece.freeze();
         System.out.println(knight.frozen);
         }
 
-        if (knight.isFrozen()) {
-            knight.unfreeze();
+        if (gamePiece.isFrozen()) {
+            gamePiece.unfreeze();
             System.out.println(knight.frozen);
         }
 
 
-        if (!knight.isFrozen()) {
-            System.out.println("positionX before moving: " + knight.getPositionX());
-            System.out.println("positionY before moving: " + knight.getPositionY());
+        if (!gamePiece.isFrozen()) {
+            System.out.println("positionX before moving: " + gamePiece.getPositionX());
+            System.out.println("positionY before moving: " + gamePiece.getPositionY());
 
-            knight.move(3, 4);
-            System.out.println("positionX after moving: " + knight.getPositionX());
-            System.out.println("positionY after moving: " + knight.getPositionY());
+            gamePiece.move(3, 4);
+            System.out.println("positionX after moving: " + gamePiece.getPositionX());
+            System.out.println("positionY after moving: " + gamePiece.getPositionY());
         }
 
-        if (knight.isFrozen()) {
+        if (gamePiece.isFrozen()) {
             System.out.println(knight.getName()+" is frozen and can't move");
         }
 
