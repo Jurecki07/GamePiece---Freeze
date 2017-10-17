@@ -1,13 +1,35 @@
 package com.TheIronYard;
 
 public class GamePiece {
-    int positionX;
+    int positionX = 0;
+    int positionY = 0;
+    boolean frozen = false;
+    String name;
+    String color;
 
-    int positionY;
+    public int getPositionX() {
+        return positionX;
+    }
 
-    boolean frozen;
-   private String name;
-   private String color;
+    public void setPositionX(int positionX) {
+        this.positionX = positionX;
+    }
+
+    public int getPositionY() {
+        return positionY;
+    }
+
+    public void setPositionY(int positionY) {
+        this.positionY = positionY;
+    }
+
+    public boolean isFrozen() {
+        return frozen;
+    }
+
+    public void setFrozen(boolean frozen) {
+        this.frozen = frozen;
+    }
 
     public String getName() {
         return name;
@@ -23,26 +45,9 @@ public class GamePiece {
 
     public void setColor(String color) {
         this.color = color;
-    }
 
-    public int getPositionX() {
-        return positionX;
     }
-
-    public int getPositionY() {
-        return positionY;
-    }
-
-    public boolean isFrozen() {
-        return frozen;
-    }
-
     public GamePiece() {
-
-        this.positionX = 0;
-        this.positionY = 0;
-
-        this.frozen = false;
         this.name = name;
         this.color = color;
     }
