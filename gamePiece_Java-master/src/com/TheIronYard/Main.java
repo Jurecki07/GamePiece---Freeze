@@ -6,19 +6,14 @@ public class Main {
 
         GamePiece gamePiece = new GamePiece();
 
-       // gamePiece.setColor("white");
-        //knight.setName("Sir Robin");
-
         if (!gamePiece.isFrozen()) {
             gamePiece.freeze();
         System.out.println(knight.frozen);
         }
-
         if (gamePiece.isFrozen()) {
             gamePiece.unfreeze();
             System.out.println(knight.frozen);
         }
-
 
         if (!gamePiece.isFrozen()) {
             System.out.println("positionX before moving: " + gamePiece.getPositionX());
@@ -32,10 +27,6 @@ public class Main {
         if (gamePiece.isFrozen()) {
             System.out.println(knight.getName()+" is frozen and can't move");
         }
-
-
-
-
 
     }
 }
